@@ -49,14 +49,22 @@ notebooks & images for such training, the model archival, & querying the inferen
 
 ## Stable Diffusion 3
 
-### :warning: SD3 directory is WIP! Loading & querying in archive notebook works fine. Expect issues w/ tokenized model access for container &/or training SIGKILLS.
+### :warning: SD3 scenario adaptation is still a Work-In-Progress
+
+### Expect issues w/ resource requirements around training compounded by token-gated model repo
 
 - If you're after a look at the latest & greatest that StabilityAI has made available, the [stable-diffusion-3](stable-diffusion-3) directory offers notebooks
-for emulating previous examples for serving the base SD3 model or just using the diffusers pipeline with provided tuning weights. The `handler` class for 
-tuned weights serving has been included, but as before, will require updates should you alter the pipeline. If you decide to try and serve the base model, 
+for emulating previous examples for serving the base SD3 model ~~or just using the diffusers pipeline with provided tuning weights. The `handler` class for 
+tuned weights serving has been included, but as before, will require updates should you alter the pipeline.~~ If you decide to try and serve the base model, 
 know what you're in for - the `.mar` archive file is 12GB.
 
 
+- When attempting training on GPU with 48GB of memory available, accelerate still maxed out and failed. Offloading also failed to a different cause.
+
+
+- SD3 offers some [suggestions](https://huggingface.co/docs/diffusers/en/api/pipelines/stable_diffusion/stable_diffusion_3#memory-optimisations-for-sd3) for 
+memory optimization, however, I haven't had a chance to pursue updating dreambooth training scripts to accommodate the change(s), particularly around dropping 
+the T5-XXL encoder.
 
 ## A Cleaner Containerized Approach for Stable Diffusion via KServe
 
