@@ -1,5 +1,7 @@
 # dev-added
  .idea
+ token.cfg
+ hf_token.cfg
  downloaded_model/
  refiner_model/
  model.zip
