@@ -188,7 +188,7 @@ The [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) models fr
 project out of Germany. Though often loosely referred to as a "model", Stable Diffusion is more an "ensemble of experts" model pipeline composed of various models that, when combined, 
 achieve the target goal. The number and nature of the individual models making up the composite vary from release to release
 
->The LDM is trained by using a Markov chain to gradually add noise to the training images. The model is then trained to reverse this process, starting 
+>The Latent Diffusion Model (LDM) is trained by using a Markov chain to gradually add noise to the training images. The model is then trained to reverse this process, starting 
 with a noisy image and gradually removing the noise until it recovers the original image. More specifically, the training process can be 
 described as follows:
 >
